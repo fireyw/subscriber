@@ -1,21 +1,21 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {addSubscriber} from "../redux/index";  // ../redux라고 써도 index는 자동인식됨
+import {addView} from "../redux/index";  //action
 
 
 //props 안에는 count, addSubscriber() 존재
-const Subscribers = ({count, addSubscriber}) => {
+const Views = ({count, addView}) => {
     return (
         <div class="items">
-            <h3>구독자수: {count}</h3>
-            <button onClick={()=>addSubscriber()}>구독하기!</button>
+            <h3>조회수: {count}</h3>
+            <button onClick={()=>addView()}>조회하기!</button>
         </div>
 
     );
 };
 
 const mapStateToProps = ({subscribers})=>{
-    // console.log(state, 'state');
+     console.log(subscribers, 'state');
     return{
         count: subscribers.count
     }
@@ -28,7 +28,7 @@ const mapStateToProps = ({subscribers})=>{
 // }
 
 const mapDispatchToProps ={
-    addSubscriber
+    addView
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(Subscribers);
+export default connect(mapStateToProps,mapDispatchToProps)(Views);

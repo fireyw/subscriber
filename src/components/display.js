@@ -9,9 +9,9 @@ const Display = (props) => {
     );
 };
 
-const mapStateToProps = (state)=>{
+const mapStateToProps = ({subscribers})=>{
     return {
-        count:state.count
+        count:subscribers.count
     }
 }
 //Display에 mapStateToProps 인자를 연결한다

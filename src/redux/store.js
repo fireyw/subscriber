@@ -1,6 +1,7 @@
 import { createStore } from 'redux';
-import subReducer from "../components/subscribers/reducer";
 
-const store = createStore(subReducer)
+import rootRecuder from "./rootRecuder";
+
+const store = createStore(rootRecuder);
 
 export default store;
