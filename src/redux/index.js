@@ -1,3 +1,4 @@
-//모든action을 export
-export { addSubscriber, removeSubscribers} from './subscribers/actions'
+//모든action을 모아놈
+
+export { addSubName, addSubscriber, removeSubscribers} from './subscribers/actions'
 export { addView } from './views/actions'

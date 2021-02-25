@@ -5,11 +5,13 @@ const initialState = {
 }
 
 const viewsReducer =(state=initialState, action)=>{
-    switch(action.type){
+    console.log('reducer: ', action);
+    switch(action.type){ //action안에는 type과 payload존재
         case ADD_VIEW:
             return{
                 ...state,
-                count:state.count + 1
+                // count:state.count + action.payload NAN으로나옴
+                count:state.count + 5
             }
         default: return state
     }

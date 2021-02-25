@@ -1,6 +1,6 @@
 import {combineReducers} from "redux";
 import subReducer from "./subscribers/reducer";
-import viewsReducer from "./subscribers/reducer";
+import viewsReducer from "./views/reducer";
 
 const rootReducer = combineReducers({
     views: viewsReducer,
