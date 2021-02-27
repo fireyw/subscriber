@@ -7,13 +7,17 @@ const Comments = ({fetchComments, loading, comments}) => {  //props안에 들어
         fetchComments()
     }, []) //랜더링 후 1번만 실행되도록
     const commentsItems= loading ? (<div>is loading</div>):
-        comments.map(comment=>(
-            <div key={comment.id}>
-                <h3>{comment.name}</h3>
-                <h3>{comment.email}</h3>
-                <h3>{comment.body}</h3>
-            </div>
-            )
+        comments.map(comment=>{
+            return comment.id<5 ?
+            (
+                    <div key={comment.id}>
+                        <h3>{comment.name}</h3>
+                        <h3>{comment.email}</h3>
+                        <h3>{comment.body}</h3>
+                    </div>
+                ):
+            false
+            }
         )
     return (
         <div class="comments">
