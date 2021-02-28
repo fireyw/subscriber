@@ -19,7 +19,7 @@ ______   +--```subscribers```
    "redux": "^4.0.5",
    "redux-devtools-extension": "^2.13.8",
    "redux-logger": "^3.0.6",
-   "redux-thunk": "^2.3.0",
+   "redux-thunk": "^2.3.0", //비동기 middle ware
    "web-vitals": "^1.0.1"
    
    ex)

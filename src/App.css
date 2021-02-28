@@ -14,3 +14,11 @@
 .comments > div {
   border: 1px solid #333;
 }
+.posts{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+.posts > div {
+  border: 1px solid #333;
+}
